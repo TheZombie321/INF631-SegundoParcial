@@ -1,0 +1,165 @@
+.hamburger-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-content {
+  background-color: #222; 
+  width: 250px;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  animation: slideInFromRight 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.menu-header {
+  padding: 10px;
+  border-bottom: 1px solid #444; 
+  color: white; 
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; 
+}
+
+.menu-item {
+  border-bottom: 1px solid #444; 
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.menu-link:hover {
+  background-color: #333; 
+}
+
+.menu-icon {
+  margin-right: 15px;
+  font-size: 18px;
+  color: #fff; 
+}
+
+.menu-text {
+  font-size: 16px;
+}
+
+
+.menu-image-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #444;
+}
+
+.menu-logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; 
+}
+
+
+.close-menu-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff; 
+  cursor: pointer;
+  padding: 5px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.close-menu-button:hover {
+  transform: rotate(90deg);
+  color: #ccc;
+}
+
+
+.flags-section {
+  padding: 15px 20px;
+  border-top: 1px solid #444;
+  background-color: #2a2a2a; 
+}
+
+.flags-section h4 {
+  margin-bottom: 15px;
+  color: #aaa; 
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.flags-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.flag-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white; 
+}
+
+.flag-button:hover {
+  background-color: #333;
+}
+
+.flag-button.selected {
+  background-color: #1a4b8c; 
+  border-color: #4285f4;
+}
+
+.flag-name {
+  font-size: 0.9rem;
+}
